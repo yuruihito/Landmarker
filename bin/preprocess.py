@@ -1,101 +1,94 @@
 import os
-import json
-import numpy as np
-import torch
-import SimpleITK as sitk
 import argparse
-from sklearn.model_selection import KFold
-from scipy.ndimage import gaussian_filter
-from scripts.utils.fcsv_utils import get_coords_from_fcsv_center_list
-from scripts.preprocesser.visualizer_for_preprocess import VisualizeForSwinUNET
-from scripts.preprocesser.preprocesser import SwinUNetPreProcesser
+import numpy as np
+from tqdm import tqdm
 
-def process_mri_files(args):
-    """
-    Process all MRI files in the input folder using global windowing.
+from src.swinunetr.preproceser.preprocesser import SwinUNETRPreProcesser
+from src.swinunetr.preproceser.window import window
+from src.swinunetr.preproceser.mkheatmap import create_multi_channels_heatmaps_3d
+from src.swinunetr.utils.visualizer import preprocesss_visualizer
 
-    Args:
-        input_folder (str): Path to the folder containing MRI images.
-        output_folder (str): Path to save processed .npy files.
+"""
+The structure of the dataset to be prepared
+dataset | 
+    project |
+        input |
+            id001 |
+                raw.mhd
+            id002 |
+                raw.mhd 
+        fcsv | 
+            id001 |
+                landmark.fcsv
+            id002 |
+                landmark.fcsv
+        preprocessed | (output)
+            id001 |
+                raw.mhd(preprocessed)
+                label.mhd
+                preprocessed.png
+            id002 |
+                raw.mhd
+                label.mhd
+                preprocessed.png
+        kfold |
+            fold1 |
+                train.txt
+                val.txt
+                test.txt
+            fold2 |
+                train.txt
+                val.txt
+                test.txt           
+"""
+def main(args): 
+
+    pre = SwinUNETRPreProcesser(args.dataset_dir, f'{args.project_name}_{args.k_fold}fold', args.k_fold, args.lm_keys)
+    img_ids = pre.get_img_ids()
+    paths_dict = pre.get_all_path_dict(img_ids)
+    points_dict = pre.get_coordinate_points_dict(img_ids, paths_dict)
+
+    for id in tqdm(img_ids, desc='prepraring'):
+        img_np, img_sitk, size, spacing, origin, direction = pre.img_load(paths_dict[id]['img_path'])
+        id_point = pre.convert_physical_to_pixel_indices(img_sitk, points_dict[id])
+
+        # adapting window process against raw img 
+        normalized_np_img = window(img_np)
+
+        # creating heatmaps
+        heatmaps = create_multi_channels_heatmaps_3d(size, id_point, args.sigma)
+        heatmaps_itk_order = np.transpose(heatmaps, (1, 2, 3, 0))
+
+        # visualize
+        preprocesss_visualizer(normalized_np_img, heatmaps, id_point.values(), 
+                               id_point['head_center'], paths_dict[id]['output_dir'])
+
+        # set meta 
+        set_meta_normalized_img = pre.set_meta(normalized_np_img, spacing, origin, direction)
+        set_meta_heatmaps = pre.set_meta(heatmaps_itk_order, spacing, origin, direction)
         
-    """
-    pre = SwinUNetPreProcesser(args)
-    saver = VisualizeForSwinUNET()
+        # save img
+        pre.save_mhd_img(set_meta_normalized_img, os.path.join(paths_dict[id]['output_dir'], 'raw.mhd'))
+        pre.save_mhd_img(set_meta_heatmaps, os.path.join(paths_dict[id]['output_dir'], 'label.mhd'))
 
-    # get config 
-    input_folders = pre.get_directory_paths()
-    file_paths = pre.get_raw_image_paths(input_folders)
-    output_heatmap_dir = pre.get_output_dir("label")
-    output_seg_dir = pre.get_output_dir('seg')
-    output_mri_dir = pre.get_output_dir("mri")
-      
-    image_ids = []
-    for file_path in file_paths:
+        # save each txt file writed how to divide the data 
+        pre.save_kfold_split()
 
-        # get image_id and output_path, fcsv path
-        image_id, image_ids = pre.get_image_ids(file_path, image_ids)
-        seg_path = pre.get_seg_label_path(args.input_dir, image_id)
-        output_heatmap_file_folder = pre.get_output_dir(image_id, output_heatmap_dir)
-        output_mri_file_folder = pre.get_output_dir(image_id, output_mri_dir)
-        output_seg_file_folder = pre.get_output_dir(image_id, output_seg_dir)
-        fcsv_path = pre.get_fcsv_path(image_id)
+if __name__ == '__main__':
 
-        array_data, image = pre.get_image(file_path)
-        
-        # Get landmarks addapted to spacing
-        points = pre.get_coordinate_points(fcsv_path, image)
-
-        # get ww and wl
-        global_lower_bound, global_upper_bound = pre.compute_global_window_bounds(file_path)
-        ww, wl = pre.get_ww_and_wl(global_lower_bound, global_upper_bound)
-
-        # window processing
-        processed_data = pre.window(array_data, ww, wl)
-        heatmaps = pre.create_3d_heatmap(processed_data, points)
-        saver.save_concat_image(array_data, heatmaps, output_heatmap_file_folder, points)
-
-        # seg label
-        label, _ = pre.get_image(seg_path)
-        seg_label = pre.get_seg_label(array_data, label)
-        saver.save_label_vis(label, output_seg_file_folder)
-
-        pre.save_mha_file(seg_label, image, output_seg_file_folder, 'seg')
-        pre.save_mha_file(heatmaps, image, output_heatmap_file_folder, 'label')
-        pre.save_mha_file(processed_data, image, output_mri_file_folder, 'raw')
-        print(f"heatmap Saved: {output_heatmap_file_folder}")  
-        print(f"seg Saved: {output_seg_file_folder}")
-        print(f"mri Saved: {output_mri_file_folder}")
-
-    pre.split_and_save_folds(image_ids, os.path.join(pre.output_dir, f'{pre.dataset_dirname}_sigma{pre.sigma}'), pre.n_splits)
-    
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Apply windowing to MRI images and save as .npy.")
-    parser.add_argument("--input_dir", type=str, 
-                        default = "/win/scallop/user/kameda/datasets/ONFH_data", help="Path to the folder containing MRI images.")
-                        #default = r"Z:\kameda\datasets\ONFH_data\half_cropped_20240609", help="Path to the folder containing MRI images.")
-                        #default = "/win/scallop/user/kameda/datasets/ONFH_data/63cases", help="Path to the folder containing MRI images.")
-    parser.add_argument("--output_dir", type=str, 
-                        default = "/win/scallop/user/kameda/Swin-UNETR/dataset/landmark/40cases", help="Path to save processed dataset.")
-                        #default = r"Z:\kameda\Swin-UNETR\dataset\landmark\40cases", help="Path to save processed dataset.")
-    parser.add_argument("--fcsv_folder", type=str,
-                        #default = "/win/scallop/user/kameda/datasets/ONFH_data/63cases_Landmark", help="Path to the folder containing .fcsv files.")
-                        default = "/win/scallop/user/kameda/datasets/ONFH_data/kono_landmarks", help="Path to the folder containing .fcsv files.")
-                        #default = r"Z:\kameda\datasets\ONFH_data\kono_landmarks", help="Path to the folder containing .fcsv files.")
-    parser.add_argument('--train_valid_dir', type=str, 
-                       )
-    parser.add_argument('--train_test_dir', type=str, 
-                       )
-    parser.add_argument('--dataset_dirname', default="40cases", type = str,  
-                        help='to save every epochs you set')
-    parser.add_argument("--points_name", type=str, nargs='+',
-                        default = "head_center", help="Path to the folder containing .fcsv files.")
-                        #default = ["FHC"], help="Path to the folder containing .fcsv files.")
-    parser.add_argument("--n_splits", type=int,
-                        default = 4, help="Path to the folder containing .fcsv files.")
-    parser.add_argument("--sigma", type=float,
-                        default = 3, help="heatmap gausian sigma")
-    parser.add_argument('--taskname', type=str,
-                        default='heatmap')
-    
+    parser = argparse.ArgumentParser(description="Script to preprocess images \
+                                      and landmarks for training. Reads images, \
+                                     normalizes them, and creates Gaussian heatmaps, \
+                                     saving the output to a specified path.")
+    parser.add_argument('--dataset_dir', type=str,
+                        default=r'/mnt/c/Users/kameda/Documents/projects/SwinUNETR/dataset')
+    parser.add_argument('--project_name', type=str,
+                        default='practice_40cases')
+    parser.add_argument('--k_fold', type=int,
+                        default=4)
+    parser.add_argument('--lm_keys', nargs='+',
+                        default=['head_center', 'Acetabular_outermost', 'tear_drop'])
+    parser.add_argument('--sigma', type=float,
+                        default=3.0)
     args = parser.parse_args()
-    process_mri_files(args)
+    main(args)

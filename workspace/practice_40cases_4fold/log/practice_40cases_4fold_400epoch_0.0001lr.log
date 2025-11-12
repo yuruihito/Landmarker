@@ -1,0 +1,243 @@
+2025-11-11 18:33:12,976 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 18:33:23,075 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 18:34:19,649 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:02:49,223 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:05:50,884 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:12:53,610 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:31:59,336 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:35:29,899 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:39:49,270 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:56:05,290 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:57:16,167 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:57:16,727 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 20:57:16,729 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 20:57:16,730 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 20:57:16,731 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 20:57:16,732 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 20:57:16,732 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 20:57:16,733 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 20:57:16,733 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 20:57:16,734 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 20:57:16,734 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 20:57:16,734 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 20:59:40,954 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 20:59:41,509 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 20:59:41,510 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 20:59:41,512 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 20:59:41,514 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 20:59:41,515 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 20:59:41,516 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 20:59:41,517 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 20:59:41,518 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 20:59:41,518 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 20:59:41,518 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 20:59:41,519 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 20:59:41,523 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 20:59:41,523 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:03:03,458 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:03:04,030 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:03:04,032 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:03:04,033 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:03:04,034 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:03:04,035 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:03:04,036 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:03:04,037 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:03:04,037 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:03:04,038 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:03:04,038 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:03:04,039 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:03:04,043 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:03:04,044 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:08:56,421 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:08:57,044 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:08:57,045 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:08:57,046 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:08:57,046 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:08:57,047 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:08:57,047 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:08:57,047 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:08:57,048 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:08:57,048 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:08:57,048 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:08:57,049 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:08:57,051 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:08:57,051 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:10:59,921 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:11:00,494 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:11:00,496 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:11:00,497 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:11:00,498 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:11:00,499 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:11:00,499 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:11:00,500 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:11:00,500 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:11:00,501 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:11:00,501 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:11:00,501 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:11:00,505 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:11:00,505 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:11:34,425 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:11:35,005 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:11:35,007 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:11:35,008 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:11:35,009 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:11:35,010 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:11:35,011 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:11:35,011 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:11:35,012 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:11:35,013 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:11:35,013 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:11:35,013 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:11:35,016 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:11:35,017 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:14:44,337 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:14:44,930 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:14:44,932 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:14:44,933 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:14:44,935 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:14:44,938 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:14:44,940 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:14:44,942 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:14:44,943 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:14:44,944 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:14:44,945 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:14:44,946 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:14:44,953 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:14:44,954 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:21:08,729 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:21:09,308 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:21:09,311 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:21:09,312 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:21:09,313 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:21:09,314 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:21:09,316 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:21:09,317 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:21:09,319 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:21:09,321 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:21:09,322 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:21:09,323 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:21:09,329 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:21:09,330 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-11 21:22:50,310 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-11 21:22:50,866 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-11 21:22:50,868 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-11 21:22:50,868 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-11 21:22:50,869 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-11 21:22:50,870 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-11 21:22:50,871 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-11 21:22:50,872 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-11 21:22:50,873 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-11 21:22:50,873 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-11 21:22:50,874 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-11 21:22:50,874 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-11 21:22:50,877 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-11 21:22:50,877 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 12:53:33,511 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 12:53:34,113 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-12 12:53:34,115 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 12:53:34,117 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-12 12:53:34,119 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-12 12:53:34,120 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-12 12:53:34,121 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-12 12:53:34,121 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-12 12:53:34,122 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-12 12:53:34,123 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-12 12:53:34,123 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-12 12:53:34,124 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-12 12:53:34,127 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-12 12:53:34,128 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 12:59:22,769 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 12:59:23,340 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-12 12:59:23,342 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 12:59:23,344 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-12 12:59:23,345 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-12 12:59:23,347 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-12 12:59:23,347 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-12 12:59:23,348 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-12 12:59:23,348 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-12 12:59:23,349 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-12 12:59:23,350 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-12 12:59:23,350 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-12 12:59:23,354 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-12 12:59:23,355 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 12:59:24,663 [INFO    ] project.loading (cachedataset.py:28): starting cache data into RAM ...
+2025-11-12 13:07:10,314 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 13:07:10,884 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-12 13:07:10,885 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 13:07:10,886 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-12 13:07:10,887 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-12 13:07:10,888 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-12 13:07:10,889 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-12 13:07:10,890 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-12 13:07:10,890 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-12 13:07:10,891 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-12 13:07:10,891 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-12 13:07:10,892 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-12 13:07:10,895 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-12 13:07:10,895 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 13:11:45,083 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 13:11:45,703 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-12 13:11:45,706 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 13:11:45,709 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-12 13:11:45,711 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-12 13:11:45,713 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-12 13:11:45,715 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-12 13:11:45,716 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-12 13:11:45,716 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-12 13:11:45,717 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-12 13:11:45,717 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-12 13:11:45,718 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-12 13:11:45,721 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-12 13:11:45,721 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 13:11:46,962 [INFO    ] project.loading (cachedataset.py:28): starting cache data into RAM ...
+2025-11-12 13:52:01,568 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 13:52:02,165 [INFO    ] project.train (trainer.py:240): --- GPU Information ---
+2025-11-12 13:52:02,167 [INFO    ] project.train (trainer.py:241): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 13:52:02,169 [INFO    ] project.train (trainer.py:244): Total Memory:    12.00 GB
+2025-11-12 13:52:02,170 [INFO    ] project.train (trainer.py:250): --- Hyperparameters ---
+2025-11-12 13:52:02,171 [INFO    ] project.train (trainer.py:251): landmark num: 3
+2025-11-12 13:52:02,172 [INFO    ] project.train (trainer.py:252): patch size: [96, 96, 96]
+2025-11-12 13:52:02,173 [INFO    ] project.train (trainer.py:253): batch size: 2
+2025-11-12 13:52:02,173 [INFO    ] project.train (trainer.py:254): max epoch: 0.0001
+2025-11-12 13:52:02,174 [INFO    ] project.train (trainer.py:255): k fold: 4
+2025-11-12 13:52:02,174 [INFO    ] project.train (trainer.py:256): model each epoch save: 20
+2025-11-12 13:52:02,175 [INFO    ] project.train (trainer.py:257): -------------------------
+2025-11-12 13:52:02,178 [INFO    ] project.train (trainer.py:109): fold 1 / 4
+2025-11-12 13:52:02,179 [INFO    ] project.train (trainer.py:71): data loading...
+2025-11-12 13:52:03,542 [INFO    ] project.loading (cachedataset.py:28): starting cache data into RAM ...
+2025-11-12 14:14:15,834 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 14:14:16,407 [INFO    ] project.train (trainer.py:244): --- GPU Information ---
+2025-11-12 14:14:16,410 [INFO    ] project.train (trainer.py:245): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 14:14:16,411 [INFO    ] project.train (trainer.py:248): Total Memory:    12.00 GB
+2025-11-12 14:14:16,413 [INFO    ] project.train (trainer.py:254): --- Hyperparameters ---
+2025-11-12 14:14:16,415 [INFO    ] project.train (trainer.py:255): landmark num: 3
+2025-11-12 14:14:16,416 [INFO    ] project.train (trainer.py:256): patch size: [96, 96, 96]
+2025-11-12 14:14:16,417 [INFO    ] project.train (trainer.py:257): batch size: 2
+2025-11-12 14:14:16,418 [INFO    ] project.train (trainer.py:258): max epoch: 0.0001
+2025-11-12 14:14:16,419 [INFO    ] project.train (trainer.py:259): k fold: 4
+2025-11-12 14:14:16,419 [INFO    ] project.train (trainer.py:260): model each epoch save: 20
+2025-11-12 14:14:16,420 [INFO    ] project.train (trainer.py:261): -------------------------
+2025-11-12 14:14:16,424 [INFO    ] project.train (trainer.py:110): fold 1 / 4
+2025-11-12 14:14:16,425 [INFO    ] project.train (trainer.py:72): data loading...
+2025-11-12 14:14:17,663 [INFO    ] project.loading (cachedataset.py:27): starting cache data into RAM ...
+2025-11-12 14:19:30,375 [INFO    ] project (logging.py:51): Logging setup complete. Log file: ./workspace/practice_40cases_4fold/log/practice_40cases_4fold_400epoch_0.0001lr.log
+2025-11-12 14:17:39,368 [INFO    ] project.train (trainer.py:244): --- GPU Information ---
+2025-11-12 14:17:39,369 [INFO    ] project.train (trainer.py:245): Device Name:     NVIDIA GeForce GTX TITAN X
+2025-11-12 14:17:39,370 [INFO    ] project.train (trainer.py:248): Total Memory:    12.00 GB
+2025-11-12 14:17:39,370 [INFO    ] project.train (trainer.py:254): --- Hyperparameters ---
+2025-11-12 14:17:39,371 [INFO    ] project.train (trainer.py:255): landmark num: 3
+2025-11-12 14:17:39,371 [INFO    ] project.train (trainer.py:256): patch size: [96, 96, 96]
+2025-11-12 14:17:39,372 [INFO    ] project.train (trainer.py:257): batch size: 2
+2025-11-12 14:17:39,372 [INFO    ] project.train (trainer.py:258): max epoch: 0.0001
+2025-11-12 14:17:39,373 [INFO    ] project.train (trainer.py:259): k fold: 4
+2025-11-12 14:17:39,374 [INFO    ] project.train (trainer.py:260): model each epoch save: 20
+2025-11-12 14:17:39,375 [INFO    ] project.train (trainer.py:261): -------------------------
+2025-11-12 14:17:39,379 [INFO    ] project.train (trainer.py:110): fold 1 / 4
+2025-11-12 14:17:39,380 [INFO    ] project.train (trainer.py:72): data loading...
+2025-11-12 14:17:40,681 [INFO    ] project.loading (cachedataset.py:27): starting cache data into RAM ...
+2025-11-12 14:17:58,053 [INFO    ] project.loading (cachedataset.py:27): starting cache data into RAM ...
+2025-11-12 14:17:59,958 [INFO    ] project.train (trainer.py:94): data loading done.
+2025-11-12 14:17:59,960 [INFO    ] project.train (trainer.py:264): Fold 1: DataLoaders are ready.
+2025-11-12 14:17:59,961 [INFO    ] project.train (trainer.py:265):   Training dataset size:   27 samples
+2025-11-12 14:17:59,962 [INFO    ] project.train (trainer.py:266):   Validation dataset size: 3 samples
+2025-11-12 14:17:59,967 [INFO    ] project.train (trainer.py:118): epoch 1 / 400

@@ -8,4 +8,4 @@ def window(img, lower_percentile=5, upper_percentile=95):
 
     scaled_img = (clipped_img - lower_bound) / (upper_bound - lower_bound) * 255
 
-    return scaled_img.astype(np.int8)
+    return scaled_img.astype(np.uint8)
