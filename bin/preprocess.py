@@ -1,4 +1,5 @@
 import os
+
 import argparse
 import numpy as np
 from tqdm import tqdm
@@ -64,12 +65,16 @@ def main(args):
                                id_point['head_center'], paths_dict[id]['output_dir'])
 
         # set meta 
-        set_meta_normalized_img = pre.set_meta(normalized_np_img, spacing, origin, direction)
-        set_meta_heatmaps = pre.set_meta(heatmaps_itk_order, spacing, origin, direction)
+        set_meta_normalized_img = pre.set_meta(normalized_np_img, 
+                                               spacing, origin, direction)
+        set_meta_heatmaps = pre.set_meta(heatmaps_itk_order, 
+                                         spacing, origin, direction)
         
         # save img
-        pre.save_mhd_img(set_meta_normalized_img, os.path.join(paths_dict[id]['output_dir'], 'raw.mhd'))
-        pre.save_mhd_img(set_meta_heatmaps, os.path.join(paths_dict[id]['output_dir'], 'label.mhd'))
+        pre.save_mhd_img(set_meta_normalized_img, 
+                         os.path.join(paths_dict[id]['output_dir'], 'raw.mhd'))
+        pre.save_mhd_img(set_meta_heatmaps, 
+                         os.path.join(paths_dict[id]['output_dir'], 'label.mhd'))
 
         # save each txt file writed how to divide the data 
         pre.save_kfold_split()
@@ -81,9 +86,9 @@ if __name__ == '__main__':
                                      normalizes them, and creates Gaussian heatmaps, \
                                      saving the output to a specified path.")
     parser.add_argument('--dataset_dir', type=str,
-                        default=r'/mnt/c/Users/kameda/Documents/projects/SwinUNETR/dataset')
+                        default=r'/mnt/Users/names')
     parser.add_argument('--project_name', type=str,
-                        default='practice_40cases')
+                        default='project')
     parser.add_argument('--k_fold', type=int,
                         default=4)
     parser.add_argument('--lm_keys', nargs='+',
