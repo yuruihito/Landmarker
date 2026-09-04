@@ -1,7 +1,8 @@
 import os
+import logging
+
 import glob
 import argparse
-import logging
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
@@ -18,7 +19,8 @@ from src.swinunetr.utils.logging import Logger
 
 def main(args):
 
-    output_path = os.path.join(args.output_dir, f'{args.project_name}_{args.k_fold}fold')
+    output_path = os.path.join(args.output_dir, 
+                               f'{args.project_name}_{args.k_fold}fold')
     os.makedirs(output_path, exist_ok=True)
 
     Logger(log_dir=os.path.join(output_path, 'log'),                 
@@ -49,7 +51,7 @@ if __name__ == '__main__':
     parser.add_argument('--output_dir', type=str,
                         default='./workspace')
     parser.add_argument('--project_name', type=str,
-                        default='practice_40cases')
+                        default='project')
     parser.add_argument('--lm_keys', nargs='+',
                         default=['head_center', 'Acetabular_outermost', 'tear_drop'])
     parser.add_argument('--patch_size', type=int,
