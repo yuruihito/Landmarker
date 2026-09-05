@@ -49,19 +49,19 @@ raw MRI (.mhd) + landmark (.fcsv)
 
 各症例の前処理時に、正規化後の画像スライス・合成ヒートマップ・ランドマーク位置を重ねたプレビュー画像が自動生成されます。
 
-![前処理プレビューの例](docs/images/preprocess_example.png)
+![前処理プレビューの例](workspace/preprocess_example.png)
 
 ### 2. 学習中の検証可視化(`epoch_{N}_validation_overlays.png`)
 
 学習中は一定 epoch ごとに、検証データに対する「正解ヒートマップ(左)」と「モデルの予測ヒートマップ(右)」を画像に重ねたものを並べて保存し、学習の進み具合を目視で確認できます。
 
-![検証可視化の例](docs/images/validation_overlay_example.png)
+![検証可視化の例](workspace/validation_overlay_example.png)
 
 ### 3. TensorBoard による学習曲線
 
 `Loss/Train`・`Loss/Valid` に加えて、ランドマークごとの検証誤差(mm)が `Val_Dist/{landmark_name}` として TensorBoard に記録されます。
 
-![学習曲線の例](docs/images/training_curves_example.png)
+![学習曲線の例](workspace/training_curves_example.png)
 
 ```bash
 tensorboard --logdir ./workspace/<project_name>_<k>fold/summary
